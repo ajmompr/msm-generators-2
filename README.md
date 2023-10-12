@@ -1,5 +1,6 @@
+# MSM App with Generators
 # Rails Template
-
+    
 This is a base Ruby on Rails repository configured for learning with Codespaces (and Gitpod).
 
 - Ruby version: `3.2.1`
