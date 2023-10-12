@@ -27,10 +27,31 @@
       </dd>
 
       <dt>
+        Year
+      </dt>
+      <dd>
+        <%= @the_movie.year %>
+      </dd>
+
+      <dt>
+        Duration
+      </dt>
+      <dd>
+        <%= @the_movie.duration %>
+      </dd>
+
+      <dt>
         Description
       </dt>
       <dd>
         <%= @the_movie.description %>
+      </dd>
+
+      <dt>
+        Image
+      </dt>
+      <dd>
+        <%= @the_movie.image %>
       </dd>
 
       <dt>
@@ -76,11 +97,35 @@
       </div>
 
       <div>
+        <label for="year_box">
+          Year
+        </label>
+
+        <input type="text" id="year_box" name="query_year" value="<%= @the_movie.year %>">
+      </div>
+
+      <div>
+        <label for="duration_box">
+          Duration
+        </label>
+
+        <input type="text" id="duration_box" name="query_duration" value="<%= @the_movie.duration %>">
+      </div>
+
+      <div>
         <label for="description_box">
           Description
         </label>
 
         <textarea id="description_box" name="query_description"><%= @the_movie.description %></textarea>
+      </div>
+
+      <div>
+        <label for="image_box">
+          Image
+        </label>
+
+        <input type="text" id="image_box" name="query_image" value="<%= @the_movie.image %>">
       </div>
 
       <div>

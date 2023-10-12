@@ -20,7 +20,10 @@ class MoviesController < ApplicationController
   def create
     the_movie = Movie.new
     the_movie.title = params.fetch("query_title")
+    the_movie.year = params.fetch("query_year")
+    the_movie.duration = params.fetch("query_duration")
     the_movie.description = params.fetch("query_description")
+    the_movie.image = params.fetch("query_image")
     the_movie.director_id = params.fetch("query_director_id")
 
     if the_movie.valid?
@@ -36,7 +39,10 @@ class MoviesController < ApplicationController
     the_movie = Movie.where({ :id => the_id }).at(0)
 
     the_movie.title = params.fetch("query_title")
+    the_movie.year = params.fetch("query_year")
+    the_movie.duration = params.fetch("query_duration")
     the_movie.description = params.fetch("query_description")
+    the_movie.image = params.fetch("query_image")
     the_movie.director_id = params.fetch("query_director_id")
 
     if the_movie.valid?
